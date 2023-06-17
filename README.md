@@ -68,36 +68,59 @@ Content-Type: application/json
 Получение тренировки по ID
 HTTP запрос
 GET /api/workouts/3
-Ответ при успешном запросе
-{
-    "id": 3,
-    "name": "legs and shoulders day",
-    "description": "legs + shoulders",
-    "duration": 2,
-    "trainer": "Kirill"
-}
+
+Ответ при успешном запросе:
+
+[
+   
+    {
+      "id": 3,
+      "name": "legs and shoulders day",
+      "description": "legs + shoulders",
+      "duration": 2,
+      "trainer": "Kirill"
+    }
+ 
+]
+
 Ответ при неудачном запросе
+
 HTTP/1.1 404 Not Found
+
 Обновление тренировки по ID
+
 HTTP запрос
+
 PUT /api/workouts/3
+
 Content-Type: application/json
-{
-        "id": 4,
-        "name": "whole body",
-        "description": "whole body day",
-        "duration": 3,
-        "trainer": "Vova"
-}
-Ответ при успешном запросе
-{
-        "id": 4,
-        "name": "whole body",
-        "description": "whole body day",
-        "duration": 3,
-        "trainer": "Vova"
-}
+[
+
+    {
+            "id": 4,
+            "name": "whole body",
+            "description": "whole body day",
+            "duration": 3,
+            "trainer": "Vova"
+    }
+    
+]
+Ответ при успешном запросе:
+
+[
+
+     {
+             "id": 4,
+             "name": "whole body",
+             "description": "whole body day",
+             "duration": 3,
+             "trainer": "Vova"
+     }
+    
+]
+
 Ответ при неудачном запросе
+
 HTTP/1.1 404 Not Found
 
 Удаление тренировки по ID
