@@ -1,15 +1,12 @@
-Документация API
+# **Документация API**
 
 
-Получение всех тренировок:
+### Получение всех тренировок:
 
-HTTP запрос
-
-GET /api/workouts
+**GET /api/workouts**
 
 Ответ:
 
-[
  
     {
         "id": 3,
@@ -32,17 +29,11 @@ GET /api/workouts
         "duration": 3,
         "trainer": "S4vel"
     }
-]
 
-Создание тренировки:
+### Создание тренировки:
 
-HTTP запрос
+**POST /api/workouts**
 
-POST /api/workouts
-
-Content-Type: application/json 
-
-[
 
     {
         "id": 4,
@@ -51,11 +42,10 @@ Content-Type: application/json
         "duration": 3,
         "trainer": "Igor"
     }
-]
+
 
 Ответ:
 
-[ 
    
     {
         "id": 4,
@@ -64,15 +54,12 @@ Content-Type: application/json
         "duration": 3,
         "trainer": "Igor"
     }
-]
 
-Получение тренировки по ID:
-HTTP запрос
-GET /api/workouts/3
+### Получение тренировки по ID:
+**GET /api/workouts/3**
 
 Ответ при успешном запросе:
 
-[
    
     {
       "id": 3,
@@ -82,20 +69,16 @@ GET /api/workouts/3
       "trainer": "Kirill"
     }
  
-]
+
 
 Ответ при неудачном запросе:
 
 HTTP/1.1 404 Not Found
 
-Обновление тренировки по ID:
+### Обновление тренировки по ID:
 
-HTTP запрос
 
-PUT /api/workouts/3
-
-Content-Type: application/json
-[
+**PUT /api/workouts/3**
 
     {
             "id": 4,
@@ -105,10 +88,9 @@ Content-Type: application/json
             "trainer": "Vova"
     }
     
-]
 Ответ при успешном запросе:
 
-[
+
 
      {
              "id": 4,
@@ -118,17 +100,16 @@ Content-Type: application/json
              "trainer": "Vova"
      }
     
-]
+
 
 Ответ при неудачном запросе:
 
 HTTP/1.1 404 Not Found
 
-Удаление тренировки по ID:
+### Удаление тренировки по ID:
 
-HTTP запрос
 
-DELETE /api/workouts/3
+**DELETE /api/workouts/3**
 
 Ответ при успешном запросе:
 
@@ -138,14 +119,14 @@ HTTP/1.1 200 OK
 
 HTTP/1.1 404 Not Found
 
-Валидация
+# **Валидация**
 
 Поле name не может быть пустым. Поле description не может быть пустым. Поле duration не может быть пустым и должно быть целым числом. Поле trainer не может быть пустым.
 
-База данных
+# **База данных**
 
 По умолчанию приложение использует базу данных PostgreSQL. Для изменения параметров подключения к базе данных необходимо изменить параметры в файле application.properties.
 
-Автор
+# **Автор**
 
 Жижин Никита Дмитриевич
